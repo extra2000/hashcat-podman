@@ -1,0 +1,7 @@
+(block hashcat_rocm_podman
+    (blockinherit container)
+    (allow process dri_device_t ( chr_file ( getattr ioctl open read write )))
+    (allow process dri_device_t ( chr_file ( map )))
+    (allow process hsa_device_t ( chr_file ( ioctl open read write )))
+    (allow process hsa_device_t ( chr_file ( map )))
+)
